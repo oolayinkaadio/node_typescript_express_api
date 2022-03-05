@@ -12,7 +12,7 @@ jobs:
      - run:
         name: run build
         command:
-          npm build
+          npm run build
 workflows:
   build_app:
     jobs:
