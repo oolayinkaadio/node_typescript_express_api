@@ -106,5 +106,5 @@ transactionRouter.put('/transactions/:id', updateTransaction);
 transactionRouter.delete('/transactions/:id', deleteTransaction);
 
 
-export { transactionRouter };
+  export const transactionRoutes =transactionRouter ;
 
