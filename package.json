@@ -6,7 +6,7 @@
   "scripts": {
     "clear": "rimraf ./dist",
     "prod": "node dist/index.js",
-    "start": "npm run build && npm run prod",
+    "start": "npm run prod",
     "start:dev": "nodemon dist/index.js",
     "build:dev": "tsc --watch --preserveWatchOutput",
     "build": "tsc",
