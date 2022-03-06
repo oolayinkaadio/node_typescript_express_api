@@ -1,9 +1,11 @@
+import * as dotenv from 'dotenv';
 import * as express from 'express';
 import { Express, Request, Response } from 'express';
 import { transactionRoutes } from './transactionHandlers';
+dotenv.config()
 
 const app: Express = express();
-const PORT: number = 4000;
+const PORT: number = 4000 || Number(process?.env.PORT);
 
 app.use(express.json());
 
