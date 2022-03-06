@@ -5,7 +5,7 @@ import { transactionRoutes } from './transactionHandlers';
 dotenv.config()
 
 const app: Express = express();
-const PORT: number = 4000 || Number(process?.env.PORT);
+const PORT= process.env.PORT || 4000;
 
 app.use(express.json());
 
