@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 import * as express from 'express';
-import { Express, Request, Response } from 'express';
+import { Express, Request, Responses } from 'express';
 import { transactionRoutes } from './transactionHandlers';
 dotenv.config()
 
