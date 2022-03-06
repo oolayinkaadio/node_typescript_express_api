@@ -1,6 +1,8 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@1.2.6
+  deploy-via-git:
+    branch: main
 jobs:
   run_build:
    docker:
