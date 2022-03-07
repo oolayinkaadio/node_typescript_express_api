@@ -18,10 +18,10 @@ jobs:
 workflows:
   build-test-and-deploy-to-heroku:
     jobs:
-      - run_build:
-          filters:
-            branches:
-              only: main
+      - run_build
       - heroku/deploy-via-git:
          requires:
            - run_build
+         filters:
+          branches:
+            only: main
