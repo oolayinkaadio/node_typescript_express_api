@@ -20,7 +20,9 @@ jobs:
 workflows:
   build_app:
     jobs:
-      - run_build
-      - heroku/deploy-via-git
-          
-       
+      - filters:
+          branches:
+            only: 
+              - main
+              - run_build
+              - heroku/deploy-via-git
