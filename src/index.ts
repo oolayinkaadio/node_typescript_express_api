@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv';
 import * as express from 'express';
 import { Express, Request, Response } from 'express';
 import { transactionRoutes } from './transactionHandlers';
-dotenv.config()
+dotenv.config();
 
 const app: Express = express();
 const PORT= process.env.PORT || 4000;
@@ -10,6 +10,10 @@ const PORT= process.env.PORT || 4000;
 app.use(express.json());
 
 app.use('/api', transactionRoutes);
+
+app.get('/hello', (req: Request, res: Response) => {
+  res.json({ msg: "Hello world" })
+});
 
 app.get('/', (req: Request, res: Response) => {
   res.json({ msg: "API working perfectly" })
